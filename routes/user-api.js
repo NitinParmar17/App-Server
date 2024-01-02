@@ -73,7 +73,7 @@ router.get('/getUser/:phone', (req, res) => {
     try {
         let number = req.params.phone;
 
-        redisClient.HGET(number, (err, reply) => {
+        redisClient.get(number, (err, reply) => {
             if (err) {
                 console.error('Error getting value from Redis:', err);
                 fetchFromDatabase();
