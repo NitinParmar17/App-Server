@@ -7,9 +7,10 @@ app.use(cors());
 const port = process.env.PORT || 5000;
 
 const routePaths = [
-    './routes/api-four-worker.js',
+    './routes/four-worker-api.js',
     './routes/api.js',
     './routes/user-api.js',
+    './routes/queue-api.js',
 ];
 
 routePaths.forEach(routePath => {

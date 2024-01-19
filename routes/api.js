@@ -23,7 +23,7 @@ router.get("/non-blocking/", (req, res) => {
 });
 
 router.get("/blocking/", async (req, res) => {
-    const worker = new Worker("./routes/worker.js");
+    const worker = new Worker("./routes/workers/worker.js");
 
     worker.on("message", (data) => {
         res.status(200).send(`result is ${data}`);
