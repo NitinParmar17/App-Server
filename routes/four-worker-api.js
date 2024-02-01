@@ -5,7 +5,7 @@ const { Worker } = require("worker_threads");
 const THREAD_COUNT = 4;
 
 router.get("/non-blocking/", (req, res) => {
-    res.status(200).send("This page is non-blocking");
+    res.status(200).send("This is non-blocking page of four-worker-api.");
 });
 
 

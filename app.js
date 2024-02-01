@@ -13,9 +13,15 @@ const routePaths = [
     './routes/queue-api.js',
 ];
 
-routePaths.forEach(routePath => {
-    const routes = require(routePath);
-    app.use('/', routes);
+routePaths.forEach(function (routePath, index) {
+    var routes = require(routePath);
+    // app.use('/', routes);
+    if (index == 1) {
+        app.use('/testing', routes);
+    }
+    else {
+        app.use('/valid', routes);
+    }
 });
 
 // const appRoutes = require('./routes/api.js');

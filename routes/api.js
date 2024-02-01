@@ -4,7 +4,7 @@ const { Worker } = require("worker_threads");
 
 const connection = require('../dbConnection.js');
 
-router.get('/abc', (req, res) => {
+router.get('/fetchUserData', (req, res) => {
     console.log("hello");
     const query = 'SELECT * FROM user'; // Replace 'users' with your table name
 

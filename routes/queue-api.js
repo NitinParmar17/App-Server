@@ -1,5 +1,6 @@
 const Queue = require('bull');
-const router = require('./api');
+const express = require("express");
+const router = express.Router();
 
 // Create a new Bull queue connected to a Redis server
 const myQueue = new Queue('myQueueName', 'redis://127.0.0.1:6379');
